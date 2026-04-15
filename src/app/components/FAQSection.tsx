@@ -43,10 +43,10 @@ export function FAQSection() {
     <section className="py-24 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
             Frequently asked questions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-stone-600">
             Everything you need to know about Ungrie
           </p>
         </div>
@@ -56,12 +56,12 @@ export function FAQSection() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-white border border-gray-200 rounded-xl px-6 data-[state=open]:border-[#25D366]/30"
+              className="bg-white border border-stone-200 rounded-xl px-6 data-[state=open]:border-[#25D366]/30"
             >
-              <AccordionTrigger className="text-left text-gray-900 hover:text-[#25D366] py-5">
+              <AccordionTrigger className="text-left text-stone-900 hover:text-orange-600 py-5">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pb-5">
+              <AccordionContent className="text-stone-600 pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

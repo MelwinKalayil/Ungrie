@@ -37,8 +37,8 @@ export function StatsSection() {
               key={index}
               className="text-center"
             >
-              <div className="w-12 h-12 bg-[#25D366]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-6 h-6 text-[#25D366]" />
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-6 h-6 text-orange-600" />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
               <div className="text-gray-900 font-semibold mb-1">{stat.label}</div>

@@ -58,7 +58,7 @@ export function Navbar() {
               >
                 {link.name}
                 {/* Animated underline effect on hover */}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#25D366] transition-all duration-300 group-hover:w-full rounded-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
               </a>
             ))}
           </div>
@@ -69,7 +69,7 @@ export function Navbar() {
               <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors">
                 Login
               </button>
-              <button className="px-5 py-2.5 bg-[#25D366] text-white rounded-xl text-sm font-semibold hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/30 active:scale-95">
+              <button className="px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-orange-700 transition-all hover:shadow-lg hover:shadow-[#25D366]/30 active:scale-95">
                 Start Free Trial
               </button>
             </div>
@@ -101,17 +101,17 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-base font-semibold text-gray-700 hover:text-[#25D366] transition-colors"
+                  className="text-base font-semibold text-gray-700 hover:text-orange-600 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <div className="h-px bg-gray-100 my-2 w-full"></div>
-              <button className="w-full py-3 text-gray-700 font-semibold bg-stone-50 rounded-xl border border-gray-200">
+              <button className="w-full py-3 text-gray-700 font-semibold bg-gray-50 rounded-xl border border-gray-200">
                 Login
               </button>
-              <button className="w-full py-3 bg-[#25D366] text-white rounded-xl font-bold shadow-md shadow-[#25D366]/20 active:scale-95 transition-all">
+              <button className="w-full py-3 bg-primary text-white rounded-xl font-bold shadow-md shadow-[#25D366]/20 active:scale-95 transition-all">
                 Start Free Trial
               </button>
             </div>

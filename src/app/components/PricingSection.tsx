@@ -27,7 +27,7 @@ export function PricingSection() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } as any }
   };
 
   return (
@@ -86,8 +86,8 @@ export function PricingSection() {
               <ul className="space-y-4 mb-8 min-h-[320px]">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#25D366]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-[#25D366] stroke-[3]" />
+                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-orange-600 stroke-[3]" />
                     </div>
                     <span className="text-gray-700 text-sm font-medium">{feature}</span>
                   </li>
@@ -97,8 +97,8 @@ export function PricingSection() {
               <button
                 className={`w-full py-4 rounded-xl font-bold transition-all active:scale-[0.98] ${
                   plan.highlighted
-                    ? 'bg-[#25D366] text-white hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-[#25D366]/30'
-                    : 'bg-stone-50 text-gray-900 hover:bg-gray-100 border border-gray-200'
+                    ? 'bg-primary text-white hover:bg-orange-700 hover:shadow-lg hover:shadow-[#25D366]/30'
+                    : 'bg-gray-50 text-gray-900 hover:bg-gray-100 border border-gray-200'
                 }`}
               >
                 Get Started

@@ -14,7 +14,7 @@ export function CTASection() {
         >
           {/* Background Glows for warmth */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-amber-100/60 blur-[60px] rounded-full pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#25D366]/10 blur-[60px] rounded-full pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 blur-[60px] rounded-full pointer-events-none" />
           
           <div className="relative z-10">
             {/* Little Amber Accent Icon */}
@@ -32,7 +32,7 @@ export function CTASection() {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[#25D366] text-white rounded-xl font-bold transition-all shadow-lg shadow-[#25D366]/20 inline-flex items-center gap-2"
+              className="px-8 py-4 bg-primary text-white rounded-xl font-bold transition-all shadow-lg shadow-[#25D366]/20 inline-flex items-center gap-2"
             >
               Start your 14-day free trial
               <ArrowRight className="w-5 h-5" />

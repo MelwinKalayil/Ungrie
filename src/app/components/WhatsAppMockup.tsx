@@ -10,7 +10,7 @@ export function WhatsAppMockup() {
           {/* WhatsApp Header */}
           <div className="bg-[#25D366] px-4 py-3 flex items-center gap-3">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <span className="text-lg font-bold text-[#25D366]">U</span>
+              <span className="text-lg font-bold text-orange-600">U</span>
             </div>
             <div className="flex-1">
               <div className="text-white font-semibold">Ungrie</div>
@@ -60,7 +60,7 @@ export function WhatsAppMockup() {
                     <span>$12.00</span>
                   </div>
                   <div className="border-t border-gray-200 my-2 pt-2">
-                    <div className="flex justify-between gap-4 font-semibold text-[#25D366]">
+                    <div className="flex justify-between gap-4 font-semibold text-orange-600">
                       <span>Total</span>
                       <span>$30.00</span>
                     </div>
@@ -91,8 +91,8 @@ export function WhatsAppMockup() {
                 </p>
                 <div className="flex items-center gap-1 mt-2 text-xs text-gray-400">
                   <span>Delivered</span>
-                  <Check className="w-3 h-3 text-[#25D366]" />
-                  <Check className="w-3 h-3 text-[#25D366] -ml-2" />
+                  <Check className="w-3 h-3 text-orange-600" />
+                  <Check className="w-3 h-3 text-orange-600 -ml-2" />
                 </div>
               </div>
             </div>

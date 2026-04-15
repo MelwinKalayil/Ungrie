@@ -21,11 +21,11 @@ export function FeaturesSection() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" as const } }
   };
 
   return (
-    <section id="features" className="py-16 md:py-24 px-6 lg:px-8 bg-stone-50 overflow-hidden">
+    <section id="features" className="py-16 md:py-24 px-6 lg:px-8 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -55,8 +55,8 @@ export function FeaturesSection() {
               variants={cardVariants}
               className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 hover:border-[#25D366]/30 transition-colors group hover:shadow-xl"
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-[#25D366]/10 rounded-xl flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#25D366]/20 transition-colors group-hover:scale-110 duration-300">
-                <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-[#25D366]" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 md:mb-6 group-hover:bg-primary/20 transition-colors group-hover:scale-110 duration-300">
+                <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-orange-600" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">{feature.title}</h3>
               <p className="text-gray-600 text-sm md:text-base leading-relaxed">{feature.description}</p>

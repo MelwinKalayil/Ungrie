@@ -13,16 +13,26 @@ export function ProductDemoSection() {
 
   const messageRight = {
     hidden: { opacity: 0, x: 20, scale: 0.95 },
-    visible: { opacity: 1, x: 0, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20 } }
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      scale: 1, 
+      transition: { type: "spring" as const, stiffness: 200, damping: 20 } 
+    }
   };
 
   const messageLeft = {
     hidden: { opacity: 0, x: -20, scale: 0.95 },
-    visible: { opacity: 1, x: 0, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20 } }
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      scale: 1, 
+      transition: { type: "spring" as const, stiffness: 200, damping: 20 } 
+    }
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-8 bg-stone-50 overflow-hidden">
+    <section className="py-16 md:py-24 px-6 lg:px-8 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -37,7 +47,7 @@ export function ProductDemoSection() {
             <div className="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 shadow-2xl">
               <div className="bg-[#E5DDD5] rounded-xl p-4 space-y-4">
                 <div className="flex items-center gap-2 pb-3 border-b border-gray-300/50">
-                  <div className="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center text-xs font-bold text-white">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-white">
                     JD
                   </div>
                   <div>
@@ -99,14 +109,14 @@ export function ProductDemoSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.5, type: "spring" }} // Animates in right after the last chat message!
-                  className="bg-stone-50 border-2 border-[#25D366] rounded-xl p-4 shadow-sm"
+                  className="bg-gray-50 border-2 border-[#25D366] rounded-xl p-4 shadow-sm"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <div className="text-gray-900 font-bold">Order #12848</div>
                       <div className="text-sm text-gray-500 font-medium">John Doe</div>
                     </div>
-                    <div className="bg-[#25D366]/20 text-[#25D366] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse">
+                    <div className="bg-primary/20 text-orange-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse">
                       New Order
                     </div>
                   </div>
@@ -119,13 +129,13 @@ export function ProductDemoSection() {
                       <span>Just now</span>
                     </div>
                     <div className="flex items-center gap-1 text-gray-900 font-bold text-lg">
-                      <DollarSign className="w-4 h-4 text-[#25D366]" />
+                      <DollarSign className="w-4 h-4 text-orange-600" />
                       <span>24.00</span>
                     </div>
                   </div>
                 </motion.div>
 
-                <div className="bg-stone-50 border border-gray-200 rounded-xl p-4 opacity-70">
+                <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 opacity-70">
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <div className="text-gray-900 font-semibold">Order #12847</div>

@@ -15,7 +15,7 @@ export function HeroSection() {
       <motion.div 
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-[#25D366]/10 rounded-full blur-3xl -z-10" 
+        className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary/10 rounded-full blur-3xl -z-10" 
       />
       
       <div className="max-w-7xl mx-auto">
@@ -30,7 +30,7 @@ export function HeroSection() {
           >
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-stone-900 leading-[1.1] tracking-tight">
-                Turn WhatsApp into your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] to-[#128C7E]">ordering system</span>
+                Turn WhatsApp into your <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">ordering system</span>
               </h1>
               <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 No commissions. No apps. Just direct orders from the app your customers already use.
@@ -38,7 +38,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-[#25D366] text-white rounded-xl font-bold hover:bg-[#20bd5a] transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30 active:scale-95">
+              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-primary text-white rounded-xl font-bold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30 active:scale-95">
                 Start Free Trial
               </button>
               <button className="px-6 py-3.5 md:px-8 md:py-4 bg-white text-stone-900 rounded-xl font-bold hover:bg-stone-50 transition-all border border-stone-200 flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md active:scale-95 group">
