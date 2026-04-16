@@ -33,7 +33,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Logo - Made explicitly visible on all screens */}
-          <div className="flex items-center gap-2 group cursor-pointer relative z-[101]">
+          <div className="flex items-center gap-2 group cursor-pointer relative z-[101]" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center transition-transform group-hover:rotate-12">
               <MessageSquare className="text-white w-6 h-6" />
             </div>
