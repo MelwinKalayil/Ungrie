@@ -1,107 +1,156 @@
-import { Check } from 'lucide-react';
+import { ArrowLeft, Video, Phone, MoreVertical, Plus, Camera, Mic, CheckCheck } from 'lucide-react';
 
 export function WhatsAppMockup() {
   return (
-    <div className="relative w-full max-w-sm">
+    <div className="relative w-full max-w-[340px] mx-auto">
       {/* Phone Frame */}
-      <div className="bg-gray-200 rounded-[3rem] p-3 border border-gray-300 shadow-2xl">
+      <div className="bg-gray-900 rounded-[3rem] p-2.5 border-4 border-gray-800 shadow-2xl relative">
+        {/* Notch (Optional, for modern phone feel) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-20"></div>
+
         {/* Screen */}
-        <div className="bg-white rounded-[2.5rem] overflow-hidden">
-          {/* WhatsApp Header */}
-          <div className="bg-[#25D366] px-4 py-3 flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <span className="text-lg font-bold text-orange-600">U</span>
+        <div className="bg-[#efeae2] rounded-[2.5rem] overflow-hidden relative flex flex-col h-[650px]">
+          
+          {/* Authentic WhatsApp Header */}
+          <div className="bg-[#128c7e] px-3 pt-8 pb-3 flex items-center justify-between text-white shadow-md z-10">
+            <div className="flex items-center gap-1.5 cursor-pointer">
+              <ArrowLeft className="w-5 h-5" />
+              <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center overflow-hidden shrink-0">
+                <span className="text-base font-bold text-amber-600">U</span>
+              </div>
+              <div className="leading-tight ml-1">
+                <div className="text-[15px] font-semibold">Ungrie</div>
+                <div className="text-[11px] text-white/90">Online</div>
+              </div>
             </div>
-            <div className="flex-1">
-              <div className="text-white font-semibold">Ungrie</div>
-              <div className="text-white/80 text-xs">Online</div>
+            <div className="flex items-center gap-4 shrink-0">
+              <Video className="w-5 h-5 fill-current" />
+              <Phone className="w-4 h-4 fill-current" />
+              <MoreVertical className="w-5 h-5" />
             </div>
           </div>
 
-          {/* Chat Messages */}
-          <div className="bg-stone-50 px-4 py-6 space-y-3 min-h-[500px]">
-            {/* Customer Message */}
-            <div className="flex justify-end">
-              <div className="bg-[#25D366] text-white px-4 py-2 rounded-lg rounded-tr-sm max-w-[80%]">
-                <p className="text-sm">Hi! I'd like to order</p>
+          {/* Chat Messages Area */}
+          <div className="flex-1 overflow-y-auto px-3 py-4 space-y-3">
+            {/* Date Badge */}
+            <div className="flex justify-center mb-4">
+              <span className="bg-[#d4eaf4] text-gray-600 text-[11px] px-3 py-1 rounded-lg shadow-sm">
+                Today
+              </span>
+            </div>
+
+            {/* Customer Message (Outgoing) */}
+            <div className="flex justify-end mb-2">
+              <div className="bg-[#dcf8c6] text-gray-900 px-3 py-1.5 rounded-lg rounded-tr-none max-w-[85%] shadow-sm relative">
+                <p className="text-[15px] leading-snug pb-3.5 pt-0.5">Hi! I'd like to order</p>
+                <div className="absolute bottom-1 right-2 flex items-center gap-1">
+                  <span className="text-[10px] text-gray-500">10:41 AM</span>
+                  <CheckCheck className="w-3.5 h-3.5 text-[#53bdeb]" />
+                </div>
               </div>
             </div>
 
-            {/* Bot Response */}
+            {/* Bot Response (Incoming) */}
             <div className="flex justify-start">
-              <div className="bg-white text-gray-900 px-4 py-2 rounded-lg rounded-tl-sm max-w-[85%] shadow-sm border border-gray-200">
-                <p className="text-sm">
+              <div className="bg-white text-gray-900 px-3 py-1.5 rounded-lg rounded-tl-none max-w-[85%] shadow-sm relative">
+                <p className="text-[15px] leading-snug pb-4 pt-0.5">
                   Welcome! 👋 I'm here to take your order.
                   <br /><br />
                   What would you like to order today?
                 </p>
+                <span className="absolute bottom-1 right-2 text-[10px] text-gray-400">10:41 AM</span>
               </div>
             </div>
 
-            {/* Customer Order */}
+            {/* Customer Order (Outgoing) */}
             <div className="flex justify-end">
-              <div className="bg-[#25D366] text-white px-4 py-2 rounded-lg rounded-tr-sm max-w-[80%]">
-                <p className="text-sm">1 Margherita Pizza (Large)</p>
-                <p className="text-sm">1 Caesar Salad</p>
+              <div className="bg-[#dcf8c6] text-gray-900 px-3 py-1.5 rounded-lg rounded-tr-none max-w-[85%] shadow-sm relative">
+                <div className="text-[15px] leading-snug pb-3.5 pt-0.5">
+                  <p>1 Margherita Pizza (Large)</p>
+                  <p>1 Caesar Salad</p>
+                </div>
+                <div className="absolute bottom-1 right-2 flex items-center gap-1">
+                  <span className="text-[10px] text-gray-500">10:42 AM</span>
+                  <CheckCheck className="w-3.5 h-3.5 text-[#53bdeb]" />
+                </div>
               </div>
             </div>
 
-            {/* Bot Confirmation */}
+            {/* Bot Confirmation (Incoming) */}
             <div className="flex justify-start">
-              <div className="bg-white text-gray-900 px-4 py-2.5 rounded-lg rounded-tl-sm max-w-[85%] space-y-2 shadow-sm border border-gray-200">
-                <p className="text-sm font-semibold">Order Summary:</p>
-                <div className="space-y-1 text-sm">
-                  <div className="flex justify-between gap-4">
-                    <span>1x Margherita Pizza (L)</span>
-                    <span>$18.00</span>
-                  </div>
-                  <div className="flex justify-between gap-4">
-                    <span>1x Caesar Salad</span>
-                    <span>$12.00</span>
-                  </div>
-                  <div className="border-t border-gray-200 my-2 pt-2">
-                    <div className="flex justify-between gap-4 font-semibold text-orange-600">
-                      <span>Total</span>
-                      <span>$30.00</span>
+              <div className="bg-white text-gray-900 px-3 py-1.5 rounded-lg rounded-tl-none max-w-[85%] shadow-sm relative">
+                <div className="pb-4 pt-0.5">
+                  <p className="text-[15px] font-semibold mb-1">Order Summary:</p>
+                  <div className="space-y-1 text-[14px]">
+                    <div className="flex justify-between gap-4">
+                      <span>1x Margherita Pizza (L)</span>
+                      <span>$18.00</span>
+                    </div>
+                    <div className="flex justify-between gap-4">
+                      <span>1x Caesar Salad</span>
+                      <span>$12.00</span>
+                    </div>
+                    <div className="border-t border-gray-200 my-1.5 pt-1.5">
+                      <div className="flex justify-between gap-4 font-bold text-gray-900">
+                        <span>Total</span>
+                        <span>$30.00</span>
+                      </div>
                     </div>
                   </div>
+                  <p className="text-[13px] text-gray-500 mt-2 italic">
+                    Reply with your delivery address to confirm ✅
+                  </p>
                 </div>
-                <p className="text-xs text-gray-500 mt-2">
-                  Reply with your delivery address to confirm ✅
-                </p>
+                <span className="absolute bottom-1 right-2 text-[10px] text-gray-400">10:42 AM</span>
               </div>
             </div>
 
-            {/* Customer Address */}
+            {/* Customer Address (Outgoing) */}
             <div className="flex justify-end">
-              <div className="bg-[#25D366] text-white px-4 py-2 rounded-lg rounded-tr-sm max-w-[80%]">
-                <p className="text-sm">123 Main Street, Apt 4B</p>
+              <div className="bg-[#dcf8c6] text-gray-900 px-3 py-1.5 rounded-lg rounded-tr-none max-w-[85%] shadow-sm relative">
+                <p className="text-[15px] leading-snug pb-3.5 pt-0.5">123 Main Street, Apt 4B</p>
+                <div className="absolute bottom-1 right-2 flex items-center gap-1">
+                  <span className="text-[10px] text-gray-500">10:43 AM</span>
+                  <CheckCheck className="w-3.5 h-3.5 text-[#53bdeb]" />
+                </div>
               </div>
             </div>
 
-            {/* Final Confirmation */}
+            {/* Final Confirmation (Incoming) */}
             <div className="flex justify-start">
-              <div className="bg-white text-gray-900 px-4 py-2.5 rounded-lg rounded-tl-sm max-w-[85%] shadow-sm border border-gray-200">
-                <p className="text-sm">
+              <div className="bg-white text-gray-900 px-3 py-1.5 rounded-lg rounded-tl-none max-w-[85%] shadow-sm relative">
+                <p className="text-[15px] leading-snug pb-4 pt-0.5">
                   Perfect! Your order is confirmed 🎉
                   <br /><br />
                   Estimated delivery: 30-40 mins
                   <br />
-                  Order #12847
+                  <span className="font-medium text-gray-500">Order #12847</span>
                 </p>
-                <div className="flex items-center gap-1 mt-2 text-xs text-gray-400">
-                  <span>Delivered</span>
-                  <Check className="w-3 h-3 text-orange-600" />
-                  <Check className="w-3 h-3 text-orange-600 -ml-2" />
-                </div>
+                <span className="absolute bottom-1 right-2 text-[10px] text-gray-400">10:43 AM</span>
               </div>
             </div>
+            
+            {/* Spacer for scrolling past the footer */}
+            <div className="h-2"></div>
           </div>
+
+          {/* Authentic WhatsApp Input Footer */}
+          <div className="bg-transparent p-2 flex items-end gap-2 pb-5 z-10">
+            <div className="flex-1 bg-white rounded-full flex items-center px-2 py-1.5 shadow-sm border border-gray-200 min-h-[40px]">
+              <Plus className="w-6 h-6 text-gray-500 mx-1 cursor-pointer" />
+              <div className="flex-1 px-2 text-[15px] text-gray-400">Message</div>
+              <Camera className="w-5 h-5 text-gray-500 mx-1 cursor-pointer" />
+            </div>
+            <div className="w-10 h-10 bg-[#128c7e] rounded-full flex items-center justify-center shrink-0 shadow-sm cursor-pointer mb-0.5">
+              <Mic className="w-5 h-5 text-white fill-current" />
+            </div>
+          </div>
+          
         </div>
       </div>
 
-      {/* Glow Effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-[#25D366]/20 to-[#25D366]/5 blur-3xl -z-10 rounded-full" />
+      {/* Floating Glow Effect (behind the phone) */}
+      <div className="absolute -inset-6 bg-gradient-to-r from-amber-400/20 to-[#25D366]/20 blur-2xl -z-10 rounded-[4rem] pointer-events-none" />
     </div>
   );
 }

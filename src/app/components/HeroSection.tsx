@@ -4,18 +4,19 @@ import { motion } from 'motion/react';
 
 export function HeroSection() {
   return (
-    // Changed to a warm off-white background
-    <section className="pt-28 md:pt-32 pb-16 md:pb-20 px-6 lg:px-8 relative overflow-hidden bg-[#FFFCF8]">
-      {/* Background Gradient Orbs - Softened for the warm theme */}
+    // Updated background dots to a soft orange (orange-200) to match the theme
+    <section className="pt-28 md:pt-32 pb-16 md:pb-20 px-6 lg:px-8 relative overflow-hidden bg-white bg-[radial-gradient(#fed7aa_1px,transparent_1px)] [background-size:20px_20px]">
+      
+      {/* Background Gradient Orbs - Fiery Orange & Red Theme */}
       <motion.div 
-        animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
+        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-amber-100/50 rounded-full blur-3xl -z-10" 
+        className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-orange-400/20 rounded-full blur-3xl -z-10" 
       />
       <motion.div 
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary/10 rounded-full blur-3xl -z-10" 
+        className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-red-500/10 rounded-full blur-3xl -z-10" 
       />
       
       <div className="max-w-7xl mx-auto">
@@ -30,7 +31,7 @@ export function HeroSection() {
           >
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-stone-900 leading-[1.1] tracking-tight">
-                Turn WhatsApp into your <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">ordering system</span>
+                Turn WhatsApp into your <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">ordering system</span>
               </h1>
               <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 No commissions. No apps. Just direct orders from the app your customers already use.
@@ -38,13 +39,15 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-primary text-white rounded-xl font-bold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30 active:scale-95">
+              {/* Vibrant Orange Primary Button */}
+              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-600/30 active:scale-95">
                 Start Free Trial
               </button>
-              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-white text-stone-900 rounded-xl font-bold hover:bg-stone-50 transition-all border border-stone-200 flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md active:scale-95 group">
-                {/* Amber accent on the play button */}
-                <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors">
-                  <Play className="w-4 h-4 text-amber-600 ml-0.5" fill="currentColor" />
+              
+              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-white text-stone-900 rounded-xl font-bold hover:bg-orange-50 transition-all border border-orange-200 flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md active:scale-95 group">
+                {/* Yellow & Orange accent on the play button */}
+                <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
+                  <Play className="w-4 h-4 text-orange-600 ml-0.5" fill="currentColor" />
                 </div>
                 Watch Demo
               </button>
@@ -55,10 +58,10 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="flex justify-center lg:justify-start gap-6 md:gap-8 pt-6 md:pt-8 border-t border-stone-200/60 mt-8"
+              className="flex justify-center lg:justify-start gap-6 md:gap-8 pt-6 md:pt-8 border-t border-orange-100 mt-8"
             >
               <div>
-                <div className="text-2xl md:text-3xl font-bold text-stone-900">15%</div>
+                <div className="text-2xl md:text-3xl font-bold text-stone-900">20%</div>
                 <div className="text-xs md:text-sm text-stone-500 font-medium">Commission Saved</div>
               </div>
               <div>
