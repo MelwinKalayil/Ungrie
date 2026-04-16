@@ -91,7 +91,7 @@ export function Navbar() {
                 </a>
               ))}
               <a 
-                href="https://ungrie.com/login" 
+                href="https://tasty-flbj1a845-daredevildd7s-projects.vercel.app/" 
                 className="w-full flex items-center justify-center gap-2 py-4 bg-stone-900 text-white rounded-xl font-bold"
               >
                 <LogIn className="w-5 h-5" />
