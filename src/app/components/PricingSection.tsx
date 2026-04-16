@@ -160,7 +160,7 @@ export function PricingSection() {
                     : 'bg-stone-50 text-stone-900 hover:bg-stone-100 border border-stone-200'
                 }`}
               >
-                Start 14-day free trial
+                Request Access
               </button>
             </motion.div>
           ))}

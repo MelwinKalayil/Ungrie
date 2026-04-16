@@ -1,13 +1,12 @@
-import { Play } from 'lucide-react';
+import { ArrowDown, Calendar } from 'lucide-react';
 import { WhatsAppMockup } from './WhatsAppMockup';
 import { motion } from 'motion/react';
 
 export function HeroSection() {
   return (
-    // Updated background dots to a soft orange (orange-200) to match the theme
     <section className="pt-28 md:pt-32 pb-16 md:pb-20 px-6 lg:px-8 relative overflow-hidden bg-white bg-[radial-gradient(#fed7aa_1px,transparent_1px)] [background-size:20px_20px]">
       
-      {/* Background Gradient Orbs - Fiery Orange & Red Theme */}
+      {/* Background Gradient Orbs */}
       <motion.div 
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -30,6 +29,13 @@ export function HeroSection() {
             className="space-y-6 md:space-y-8"
           >
             <div className="space-y-4 md:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-sm font-bold tracking-wide uppercase">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                Accepting New Restaurants
+              </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-stone-900 leading-[1.1] tracking-tight">
                 Turn WhatsApp into your <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">ordering system</span>
               </h1>
@@ -39,40 +45,35 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-              {/* Vibrant Orange Primary Button */}
-              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-600/30 active:scale-95">
-                Start Free Trial
-              </button>
               
-              <button className="px-6 py-3.5 md:px-8 md:py-4 bg-white text-stone-900 rounded-xl font-bold hover:bg-orange-50 transition-all border border-orange-200 flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md active:scale-95 group">
-                {/* Yellow & Orange accent on the play button */}
-                <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
-                  <Play className="w-4 h-4 text-orange-600 ml-0.5" fill="currentColor" />
+              {/* PRIMARY CALENDLY LINK */}
+              {/* TODO: Replace the href below with your actual Calendly link */}
+              <a 
+                href="https://calendly.com/ungrie-com/30min" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 md:px-8 md:py-4 bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-600/30 active:scale-95 flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-5 h-5" />
+                Book a Setup Call
+              </a>
+              
+              {/* Secondary Discovery Button */}
+              <a 
+                href="#how-it-works"
+                className="px-6 py-3.5 md:px-8 md:py-4 bg-white text-stone-900 rounded-xl font-bold hover:bg-orange-50 transition-all border border-orange-200 flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md active:scale-95 group cursor-pointer"
+              >
+                See How It Works
+                <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors ml-1">
+                  <ArrowDown className="w-4 h-4 text-orange-600 group-hover:translate-y-0.5 transition-transform" strokeWidth={3} />
                 </div>
-                Watch Demo
-              </button>
+              </a>
             </div>
+            
+            <p className="text-sm font-medium text-stone-500 mt-4">
+              Free 30-minute consultation • No commitment required
+            </p>
 
-            {/* Stats */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="flex justify-center lg:justify-start gap-6 md:gap-8 pt-6 md:pt-8 border-t border-orange-100 mt-8"
-            >
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-stone-900">20%</div>
-                <div className="text-xs md:text-sm text-stone-500 font-medium">Commission Saved</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-stone-900">2.5x</div>
-                <div className="text-xs md:text-sm text-stone-500 font-medium">More Repeat Orders</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold text-stone-900">100%</div>
-                <div className="text-xs md:text-sm text-stone-500 font-medium">Data Yours</div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right - WhatsApp Mockup */}
